@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     mode: 'production',
-    entry: './js/index.js',
+    entry: './src/js/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index_bundle.js',
@@ -17,13 +17,17 @@ module.exports = {
                     'style-loader',
                     'css-loader'
                 ]
+            },
+            {
+                test: /\.html$/i,
+                loader: 'html-loader'
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
           title: 'Development',
-          template:'index.html'
+          template:'src/index.html'
         }),
       ],
     devServer: {
