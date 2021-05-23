@@ -1,2 +1,3 @@
-console.log('javascript file');
+import '../css/index.css'
+console.log('javascript file change');
 // jdsnj
