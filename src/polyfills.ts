@@ -1,12 +1,12 @@
-// import 'core-js/es6';
-// import 'core-js/es7/reflect';
-
+import 'core-js/features/reflect';
+import 'reflect-metadata';
 require('zone.js/dist/zone');
 
-if (process.env.ENV === 'production') {
-  // Production
-} else {
-  // Development and test
+import 'ts-helpers';
+
+
+  // Development
+
   Error['stackTraceLimit'] = Infinity;
+
   require('zone.js/dist/long-stack-trace-zone');
-}
